@@ -14,11 +14,10 @@ Before using this plugin, you must ensure that `slim-lint` is installed on your 
 1. Install [Ruby](http://ruby-lang.org/).
 
 2. Install `slim-lint` by typing the following in a terminal:
-   ```
-   gem install slim-lint
+   
+         gem install slim-lint
 
 3. If you are using `rvm` or `rbenv`, ensure that they are loaded in your shell’s correct startup file. See [here](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#shell-startup-files) for more information.
-   ```
 
 **Note:** This plugin requires `slim-lint` 0.4.0 or later.
 
