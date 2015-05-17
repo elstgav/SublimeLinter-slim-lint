@@ -19,7 +19,7 @@ class SlimLint(RubyLinter):
 
     syntax = 'ruby slim'
     cmd = 'slim-lint'
-    tempfile_suffix = 'slim'
+    tempfile_suffix = '-'
     config_file = ('--config', '.slim-lint.yml', '~')
 
     version_args = '--version'
