@@ -1,7 +1,7 @@
 SublimeLinter-contrib-slim-lint
 ================================
 
-[![Build Status](https://travis-ci.org/elstgav/SublimeLinter-slim-lint.svg?branch=master)](https://travis-ci.org/elstgav/SublimeLinter-slim-lint)
+[![Build Status](https://travis-ci.org/elstgav/SublimeLinter-slim-lint.svg?branch=master)](https://travis-ci.org/elstgav/SublimeLinter-slim-lint) [![Release Version](https://img.shields.io/github/release/elstgav/SublimeLinter-slim-lint.svg)](https://github.com/elstgav/SublimeLinter-slim-lint/releases)
 
 This linter plugin for [SublimeLinter][docs] provides an interface to [slim-lint]. It will be used with files that have the “Ruby Slim” syntax.
 
@@ -14,7 +14,7 @@ Before using this plugin, you must ensure that `slim-lint` is installed on your 
 1. Install [Ruby](http://ruby-lang.org/).
 
 2. Install `slim-lint` by typing the following in a terminal:
-   
+
          gem install slim-lint
 
 3. If you are using `rvm` or `rbenv`, ensure that they are loaded in your shell’s correct startup file. See [here](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#shell-startup-files) for more information.
