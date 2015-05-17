@@ -1,7 +1,7 @@
 SublimeLinter-contrib-slim-lint
 ================================
 
-[![Build Status](https://travis-ci.org/elstgav/SublimeLinter-slim-lint.svg?branch=master)](https://travis-ci.org/elstgav/SublimeLinter-slim-lint) [![Release Version](https://img.shields.io/github/release/elstgav/SublimeLinter-slim-lint.svg)](https://github.com/elstgav/SublimeLinter-slim-lint/releases)
+[![Release Version](https://img.shields.io/github/release/elstgav/SublimeLinter-slim-lint.svg)](https://github.com/elstgav/SublimeLinter-slim-lint/releases) [![Build Status](https://travis-ci.org/elstgav/SublimeLinter-slim-lint.svg?branch=master)](https://travis-ci.org/elstgav/SublimeLinter-slim-lint)
 
 This linter plugin for [SublimeLinter][docs] provides an interface to [slim-lint]. It will be used with files that have the “Ruby Slim” syntax.
 
