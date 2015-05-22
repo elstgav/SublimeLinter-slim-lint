@@ -1,5 +1,5 @@
-SublimeLinter-contrib-slim-lint
-================================
+SublimeLinter-slim-lint
+=======================
 
 [![Release Version](https://img.shields.io/github/release/elstgav/SublimeLinter-slim-lint.svg)](https://github.com/elstgav/SublimeLinter-slim-lint/releases) [![Build Status](https://travis-ci.org/elstgav/SublimeLinter-slim-lint.svg?branch=master)](https://travis-ci.org/elstgav/SublimeLinter-slim-lint) [![Gratipay](https://img.shields.io/gratipay/elstgav.svg)](https://gratipay.com/~elstgav/)
 
@@ -24,7 +24,7 @@ Before using this plugin, you must ensure that `slim-lint` is installed on your 
 ### Linter configuration
 In order for `slim-lint` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
 
-Once you have installed and configured `slim-lint`, you can proceed to install the SublimeLinter-contrib-slim-lint plugin if it is not yet installed.
+Once you have installed and configured `slim-lint`, you can proceed to install the SublimeLinter-slim-lint plugin if it is not yet installed.
 
 ### Plugin installation
 Please use [Package Control][pc] to install the linter plugin. This will ensure that the plugin will be updated when new versions are available. If you want to install from source so you can modify the source code, you probably know what you are doing so we won’t cover that here.
@@ -33,7 +33,7 @@ To install via Package Control, do the following:
 
 1. Within Sublime Text, bring up the [Command Palette][cmd] and type `install`. Among the commands you should see `Package Control: Install Package`. If that command is not highlighted, use the keyboard or mouse to select it. There will be a pause of a few seconds while Package Control fetches the list of available plugins.
 
-2. When the plugin list appears, type `slim-lint`. Among the entries you should see `SublimeLinter-contrib-slim-lint`. If that entry is not highlighted, use the keyboard or mouse to select it.
+2. When the plugin list appears, type `slim-lint`. Among the entries you should see `SublimeLinter-slim-lint`. If that entry is not highlighted, use the keyboard or mouse to select it.
 
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings]. For information on generic linter settings, please see [Linter Settings][linter-settings].
