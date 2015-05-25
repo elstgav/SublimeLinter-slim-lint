@@ -10,7 +10,8 @@
 
 """This module exports the SlimLint plugin class."""
 
-from SublimeLinter.lint import RubyLinter
+import os
+from SublimeLinter.lint import RubyLinter, util
 
 
 class SlimLint(RubyLinter):
@@ -31,3 +32,22 @@ class SlimLint(RubyLinter):
         r'(?:(?P<error>\[E\])|(?P<warning>\[W\])) '
         r'(?P<message>[^`]*(?:`(?P<near>.+?)`)?.*)'
     )
+
+    def build_args(self, settings):
+        """
+        Return a list of args to add to cls.cmd.
+
+        We hook into this method to find the rubocop config and set it as an
+        environment variable for the rubocop linter to pick up.
+        """
+
+        if self.filename:
+            config = util.find_file(
+                os.path.dirname(self.filename),
+                '.rubocop.yml',
+                aux_dirs='~'
+            )
+            if config:
+                os.environ["RUBOCOP_CONFIG"] = config
+
+        return super().build_args(settings)
