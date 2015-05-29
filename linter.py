@@ -48,6 +48,6 @@ class SlimLint(RubyLinter):
                 aux_dirs='~'
             )
             if config:
-                self.env["RUBOCOP_CONFIG"] = config
+                self.env["SLIM_LINT_RUBOCOP_CONF"] = config
 
         return super().build_args(settings)
