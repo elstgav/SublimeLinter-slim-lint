@@ -1,28 +1,25 @@
 {
-	"folders":
-	[
-		{
-			"file_exclude_patterns":
-			[
-				".DS_Store",
-				"*.sublime-workspace"
-			],
-			"folder_exclude_patterns":
-			[
-			],
-			"path": "."
-		}
-	],
-	"settings":
-	{
-		"detect_indentation": false,
-		"ensure_newline_at_eof_on_save": true,
-		"rulers":
+  "folders":
+  [
+    {
+      "file_exclude_patterns":
+      [
+        ".DS_Store",
+        "*.sublime-workspace"
+      ],
+      "path": "."
+    }
+  ],
+  "settings":
+  {
+    "detect_indentation": false,
+    "ensure_newline_at_eof_on_save": true,
+    "rulers":
     [
       80
     ],
-		"tab_size": 2,
-		"translate_tabs_to_spaces": true,
-		"trim_trailing_white_space_on_save": true
-	}
+    "tab_size": 2,
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": true
+  }
 }
