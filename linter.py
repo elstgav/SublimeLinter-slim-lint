@@ -19,11 +19,11 @@ class SlimLint(RubyLinter):
     """Provides an interface to slim-lint."""
 
     syntax = 'ruby slim'
-    cmd = 'slim-lint'
+    cmd = 'ruby -S slim-lint'
     tempfile_suffix = '.slim'
     config_file = ('--config', '.slim-lint.yml', '~')
 
-    version_args = '--version'
+    version_args = '-S slim-lint --version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
     version_requirement = ' >= 0.4.0'
 
