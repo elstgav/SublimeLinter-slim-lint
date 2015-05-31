@@ -10,7 +10,8 @@
 
 """This module exports the SlimLint plugin class."""
 
-from SublimeLinter.lint import RubyLinter
+import os
+from SublimeLinter.lint import RubyLinter, util
 
 
 class SlimLint(RubyLinter):
@@ -18,16 +19,35 @@ class SlimLint(RubyLinter):
     """Provides an interface to slim-lint."""
 
     syntax = 'ruby slim'
-    cmd = 'slim-lint'
-    tempfile_suffix = '-'
+    cmd = 'ruby -S slim-lint'
+    tempfile_suffix = '.slim'
     config_file = ('--config', '.slim-lint.yml', '~')
 
-    version_args = '--version'
+    version_args = '-S slim-lint --version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
-    version_requirement = ' >= 0.4.0'
+    version_requirement = ' >= 0.5.0'
 
     regex = (
         r'^.+?:(?P<line>\d+) '
         r'(?:(?P<error>\[E\])|(?P<warning>\[W\])) '
         r'(?P<message>[^`]*(?:`(?P<near>.+?)`)?.*)'
     )
+
+    def build_args(self, settings):
+        """
+        Return a list of args to add to cls.cmd.
+
+        We hook into this method to find the rubocop config and set it as an
+        environment variable for the rubocop linter to pick up.
+        """
+
+        if self.filename:
+            config = util.find_file(
+                os.path.dirname(self.filename),
+                '.rubocop.yml',
+                aux_dirs='~'
+            )
+            if config:
+                self.env["SLIM_LINT_RUBOCOP_CONF"] = config
+
+        return super().build_args(settings)

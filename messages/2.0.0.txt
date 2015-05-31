@@ -1,0 +1,10 @@
+SublimeLinter-slim-lint 2.0.0
+-----------------------------
+
+* Now supports linting while you edit!
+
+
+** IMPORTANT! **
+
+This update requires the latest version of slim-lint (>= 0.5.0). Please update
+it by typing `gem install slim_lint` into your command line.
