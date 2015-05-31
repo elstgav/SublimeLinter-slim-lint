@@ -25,7 +25,7 @@ class SlimLint(RubyLinter):
 
     version_args = '-S slim-lint --version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
-    version_requirement = ' >= 0.4.0'
+    version_requirement = ' >= 0.5.0'
 
     regex = (
         r'^.+?:(?P<line>\d+) '
