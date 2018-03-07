@@ -41,7 +41,7 @@ PreCommit:
 
   Pep257:
     enabled: true
-    flags: ['--ignore=D202']
+    flags: ['--ignore=D202,D203']
 
   PythonFlake8:
     enabled: true

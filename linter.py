@@ -15,7 +15,6 @@ from SublimeLinter.lint import RubyLinter, util
 
 
 class SlimLint(RubyLinter):
-
     """Provides an interface to slim-lint."""
 
     syntax = 'ruby slim'
