@@ -40,6 +40,30 @@ For general information on how SublimeLinter works with settings, please see [Se
 
 You can configure `slim-lint` options in the way you would from the command line, with `.slim-lint.yml` files. If a `.slim-lint.yml` file is not found in the file hierarchy starting with the linted file, your home directory will also be searched. For more information, see the [slim-lint page][slim-lint]. Default configuration file can be found [here](https://github.com/sds/slim-lint/blob/master/config/default.yml).
 
+To override the config file path, you would add this to the Sublime Linter User Settings:
+
+```json
+"slimlint": {
+    "args": ["--config", "path/to/config.yml"]
+}
+```
+
+If you are using Bundler and would like to use the locked slim_lint version, you must set `use_bundle_exec` to true:
+
+```json
+"slimlint": {
+    "use_bundle_exec": true
+}
+```
+
+You can configure the rubocop config file location:
+
+```json
+"slimlint": {
+  "rubocop_config": "path/to/config.yml"
+}
+```
+
 ## Release History
 
 [See the CHANGELOG](CHANGELOG.md)

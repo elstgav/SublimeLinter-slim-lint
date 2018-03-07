@@ -1,8 +1,9 @@
 #
 # linter.py
-# Linter for SublimeLinter3, a code checking framework for Sublime Text 3
+# Linter for SublimeLinter4, a code checking framework for Sublime Text 3
 #
 # Written by Gavin Elster
+# Contributors: Richard Baptist
 # Copyright (c) 2015 Gavin Elster
 #
 # License: MIT
@@ -10,17 +11,15 @@
 
 """This module exports the SlimLint plugin class."""
 
-import os
-from SublimeLinter.lint import RubyLinter, util
+from SublimeLinter.lint import RubyLinter
 
 
 class SlimLint(RubyLinter):
     """Provides an interface to slim-lint."""
 
     syntax = 'ruby slim'
-    cmd = 'ruby -S slim-lint'
+    cmd = None
     tempfile_suffix = '.slim'
-    config_file = ('--config', '.slim-lint.yml', '~')
 
     version_args = '-S slim-lint --version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
@@ -32,21 +31,20 @@ class SlimLint(RubyLinter):
         r'(?P<message>[^`]*(?:`(?P<near>.+?)`)?.*)'
     )
 
-    def build_args(self, settings):
-        """
-        Return a list of args to add to cls.cmd.
+    def cmd(self):
+        """Build the command to run slim-lint."""
+        settings = self.get_view_settings()
 
-        We hook into this method to find the rubocop config and set it as an
-        environment variable for the rubocop linter to pick up.
-        """
+        rubocop_config_file = settings.get('rubocop_config', False)
 
-        if self.filename:
-            config = util.find_file(
-                os.path.dirname(self.filename),
-                '.rubocop.yml',
-                aux_dirs='~'
-            )
-            if config:
-                self.env["SLIM_LINT_RUBOCOP_CONF"] = config
+        if rubocop_config_file:
+            self.env["SLIM_LINT_RUBOCOP_CONF"] = rubocop_config_file
 
-        return super().build_args(settings)
+        command = ['ruby', '-S']
+
+        if settings.get('use_bundle_exec', False):
+            command.extend(['bundle', 'exec'])
+
+        command.extend(['slim-lint'])
+
+        return command
