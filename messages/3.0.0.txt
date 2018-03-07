@@ -1,0 +1,33 @@
+SublimeLinter-slim-lint 3.0.0
+-----------------------------
+
+* Fixes compatibility with SublimeLinter 4
+
+
+** IMPORTANT! **
+
+This update removes autodetection of .rubocop.yml files (in order to support SublimeLinter 4);
+instead you can manually set the rubocop file location using the new config options below.
+
+
+** New Configuration Options **
+
+To override the config file path, you would add this to the Sublime Linter User Settings:
+
+"slimlint": {
+    "args": ["--config", "path/to/config.yml"]
+}
+
+If you are using Bundler and would like to use the locked slim_lint version, you must set `use_bundle_exec` to true:
+
+"slimlint": {
+    "use_bundle_exec": true
+}
+
+You can configure the rubocop config file location:
+
+"slimlint": {
+    "rubocop_config": "path/to/config.yml"
+}
+
+See https://github.com/elstgav/SublimeLinter-slim-lint/blob/master/README.md for more details

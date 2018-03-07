@@ -6,7 +6,7 @@ SublimeLinter-slim-lint
 This linter plugin for [SublimeLinter][docs] provides an interface to [slim-lint]. It will be used with files that have the “Ruby Slim” syntax.
 
 ## Installation
-SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
+SublimeLinter 4 must be installed in order to use this plugin. If SublimeLinter 4 is not installed, please follow the instructions [here][installation].
 
 ### Linter installation
 Before using this plugin, you must ensure that `slim-lint` is installed on your system. To install `slim-lint`, do the following:
@@ -39,6 +39,30 @@ To install via Package Control, do the following:
 For general information on how SublimeLinter works with settings, please see [Settings]. For information on generic linter settings, please see [Linter Settings][linter-settings].
 
 You can configure `slim-lint` options in the way you would from the command line, with `.slim-lint.yml` files. If a `.slim-lint.yml` file is not found in the file hierarchy starting with the linted file, your home directory will also be searched. For more information, see the [slim-lint page][slim-lint]. Default configuration file can be found [here](https://github.com/sds/slim-lint/blob/master/config/default.yml).
+
+To override the config file path, you would add this to the Sublime Linter User Settings:
+
+```json
+"slimlint": {
+    "args": ["--config", "path/to/config.yml"]
+}
+```
+
+If you are using Bundler and would like to use the locked slim_lint version, you must set `use_bundle_exec` to true:
+
+```json
+"slimlint": {
+    "use_bundle_exec": true
+}
+```
+
+You can configure the rubocop config file location:
+
+```json
+"slimlint": {
+    "rubocop_config": "path/to/config.yml"
+}
+```
 
 ## Release History
 
