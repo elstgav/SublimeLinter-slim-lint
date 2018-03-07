@@ -6,7 +6,7 @@ SublimeLinter-slim-lint
 This linter plugin for [SublimeLinter][docs] provides an interface to [slim-lint]. It will be used with files that have the “Ruby Slim” syntax.
 
 ## Installation
-SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
+SublimeLinter 4 must be installed in order to use this plugin. If SublimeLinter 4 is not installed, please follow the instructions [here][installation].
 
 ### Linter installation
 Before using this plugin, you must ensure that `slim-lint` is installed on your system. To install `slim-lint`, do the following:

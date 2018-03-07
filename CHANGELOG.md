@@ -4,7 +4,7 @@
 
 #### Fixed
 
-* Fixed compatibility with SublimeLinter 4 (Thanks @rpbaptist! PR #4)
+* Fixed compatibility with SublimeLinter 4 ([PR #4](https://github.com/elstgav/SublimeLinter-slim-lint/pull/4) — thanks [@rpbaptist!](https://github.com/rpbaptist))
 
 #### Changed
 
