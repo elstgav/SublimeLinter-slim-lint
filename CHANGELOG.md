@@ -1,5 +1,15 @@
 # SublimeLinter-slim-lint Changelog
 
+## 3.0.0 (3/7/2018)
+
+#### Fixed
+
+* Fixed compatibility with SublimeLinter 4 (Thanks @rpbaptist! PR #4)
+
+#### Changed
+
+* Added new configuration options; [see README](README.md#settings) for details
+
 ## 2.0.0 (5/31/2015)
 
 #### Changed

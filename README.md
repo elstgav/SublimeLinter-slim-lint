@@ -60,7 +60,7 @@ You can configure the rubocop config file location:
 
 ```json
 "slimlint": {
-  "rubocop_config": "path/to/config.yml"
+    "rubocop_config": "path/to/config.yml"
 }
 ```
 
