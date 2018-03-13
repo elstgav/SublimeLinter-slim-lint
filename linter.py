@@ -31,14 +31,16 @@ class SlimLint(RubyLinter):
         r'(?P<message>[^`]*(?:`(?P<near>.+?)`)?.*)'
     )
 
+    defaults = {
+        '--config': '${folder}/.slim-lint.yml',
+        'env': {
+           'SLIM_LINT_RUBOCOP_CONF': '${folder}/.rubocop.yml'
+        }
+    }
+
     def cmd(self):
         """Build the command to run slim-lint."""
         settings = self.get_view_settings()
-
-        rubocop_config_file = settings.get('rubocop_config', False)
-
-        if rubocop_config_file:
-            self.env["SLIM_LINT_RUBOCOP_CONF"] = rubocop_config_file
 
         command = ['ruby', '-S']
 
