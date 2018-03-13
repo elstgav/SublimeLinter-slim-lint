@@ -1,0 +1,15 @@
+SublimeLinter-slim-lint 3.1.0
+-----------------------------
+
+* Fixes autodetection of .rubocop.yml files
+
+
+** Custom rubocop configuration has changed **
+
+You can now set it with the following configuration:
+
+"slimlint": {
+    "env": "{'SLIM_LINT_RUBOCOP_CONF': 'path/to/.rubocop.yml'}"
+}
+
+See https://github.com/elstgav/SublimeLinter-slim-lint/blob/master/README.md for more details

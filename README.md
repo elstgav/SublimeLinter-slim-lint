@@ -44,7 +44,7 @@ To override the config file path, you would add this to the Sublime Linter User 
 
 ```json
 "slimlint": {
-    "args": ["--config", "path/to/config.yml"]
+    "args": ["--config", "path/to/.slim-lint.yml"]
 }
 ```
 
@@ -60,7 +60,7 @@ You can configure the rubocop config file location:
 
 ```json
 "slimlint": {
-    "rubocop_config": "path/to/config.yml"
+    "env": "{'SLIM_LINT_RUBOCOP_CONF': 'path/to/.rubocop.yml'}"
 }
 ```
 

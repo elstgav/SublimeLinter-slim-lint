@@ -1,5 +1,15 @@
 # SublimeLinter-slim-lint Changelog
 
+## 3.1.0 (3/13/2018)
+
+#### Fixed
+
+* Fixed autodetection of rubocop configuration ([PR #5](https://github.com/elstgav/SublimeLinter-slim-lint/pull/5) — thanks [@rpbaptist!](https://github.com/rpbaptist))
+
+#### Changed
+
+* Configuration option for custom rubocop path has changed, [see README](README.md#settings) for details
+
 ## 3.0.0 (3/7/2018)
 
 #### Fixed
