@@ -20,10 +20,6 @@ class SlimLint(RubyLinter):
     cmd = None
     tempfile_suffix = '.slim'
 
-    version_args = '-S slim-lint --version'
-    version_re = r'(?P<version>\d+\.\d+\.\d+)'
-    version_requirement = '>= 0.5.0'
-
     regex = (
         r'^.+?:(?P<line>\d+) '
         r'(?:(?P<error>\[E\])|(?P<warning>\[W\])) '
@@ -31,7 +27,10 @@ class SlimLint(RubyLinter):
     )
 
     defaults = {
-        'selector': 'source.slim',
+        'selector': 'source.slim, source.html.slim',
+        '--ignore=,': '',
+        '--warn=,': '',
+        '--error=,': '',
         '--config': '${folder}/.slim-lint.yml',
         'env': {
            'SLIM_LINT_RUBOCOP_CONF': '${folder}/.rubocop.yml'
