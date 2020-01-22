@@ -17,7 +17,6 @@ from SublimeLinter.lint import RubyLinter
 class SlimLint(RubyLinter):
     """Provides an interface to slim-lint."""
 
-    cmd = None
     tempfile_suffix = '.slim'
 
     regex = (
