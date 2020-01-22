@@ -27,10 +27,7 @@ class SlimLint(RubyLinter):
     )
 
     defaults = {
-        'selector': 'source.slim, source.html.slim',
-        '--ignore=,': '',
-        '--warn=,': '',
-        '--error=,': '',
+        'selector': 'text.slim',
         '--config': '${folder}/.slim-lint.yml',
         'env': {
            'SLIM_LINT_RUBOCOP_CONF': '${folder}/.rubocop.yml'
