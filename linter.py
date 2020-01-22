@@ -18,7 +18,7 @@ class SlimLint(RubyLinter):
     """Provides an interface to slim-lint."""
 
     cmd = None
-    tempfile_suffix = '${temp_file}.slim'
+    tempfile_suffix = '.slim'
 
     regex = (
         r'^.+?:(?P<line>\d+) '
