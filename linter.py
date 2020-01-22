@@ -18,7 +18,7 @@ class SlimLint(RubyLinter):
     """Provides an interface to slim-lint."""
 
     cmd = None
-    tempfile_suffix = '.slim'
+    tempfile_suffix = '${temp_file}.slim'
 
     regex = (
         r'^.+?:(?P<line>\d+) '
@@ -36,7 +36,7 @@ class SlimLint(RubyLinter):
 
     def cmd(self):
         """Build the command to run slim-lint."""
-        settings = self.get_view_settings()
+        settings = self.settings
 
         command = ['ruby', '-S']
 
