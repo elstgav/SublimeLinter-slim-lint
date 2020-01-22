@@ -1,0 +1,5 @@
+
+SublimeLinter-slim-lint 3.2.0
+-----------------------------
+
+* Fixes build configuration to use with new linter syntax
