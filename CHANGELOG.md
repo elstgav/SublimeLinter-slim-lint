@@ -1,6 +1,6 @@
 # SublimeLinter-slim-lint Changelog
 
-## 3.2.0 (1/22/2020)
+## 3.2.0 (2/11/2020)
 
 #### Fixed
 
