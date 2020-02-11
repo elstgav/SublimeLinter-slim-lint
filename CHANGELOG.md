@@ -1,5 +1,11 @@
 # SublimeLinter-slim-lint Changelog
 
+## 3.2.0 (1/22/2020)
+
+#### Fixed
+
+* Fixed loading for new syntax on sublimelinter
+
 ## 3.1.0 (3/13/2018)
 
 #### Fixed

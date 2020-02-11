@@ -17,13 +17,7 @@ from SublimeLinter.lint import RubyLinter
 class SlimLint(RubyLinter):
     """Provides an interface to slim-lint."""
 
-    syntax = 'ruby slim'
-    cmd = None
     tempfile_suffix = '.slim'
-
-    version_args = '-S slim-lint --version'
-    version_re = r'(?P<version>\d+\.\d+\.\d+)'
-    version_requirement = '>= 0.5.0'
 
     regex = (
         r'^.+?:(?P<line>\d+) '
@@ -32,6 +26,7 @@ class SlimLint(RubyLinter):
     )
 
     defaults = {
+        'selector': 'text.slim',
         '--config': '${folder}/.slim-lint.yml',
         'env': {
            'SLIM_LINT_RUBOCOP_CONF': '${folder}/.rubocop.yml'
@@ -40,7 +35,7 @@ class SlimLint(RubyLinter):
 
     def cmd(self):
         """Build the command to run slim-lint."""
-        settings = self.get_view_settings()
+        settings = self.settings
 
         command = ['ruby', '-S']
 
