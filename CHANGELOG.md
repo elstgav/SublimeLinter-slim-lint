@@ -4,13 +4,13 @@
 
 #### Fixed
 
-* Fixed loading for new syntax on sublimelinter
+* Fixed loading for new syntax on sublimelinter ([PR #10](https://github.com/elstgav/SublimeLinter-slim-lint/pull/10) - thanks [@zerma](https://github.com/zerma)!)
 
 ## 3.1.0 (3/13/2018)
 
 #### Fixed
 
-* Fixed autodetection of rubocop configuration ([PR #5](https://github.com/elstgav/SublimeLinter-slim-lint/pull/5) — thanks [@rpbaptist!](https://github.com/rpbaptist))
+* Fixed autodetection of rubocop configuration ([PR #5](https://github.com/elstgav/SublimeLinter-slim-lint/pull/5) — thanks [@rpbaptist](https://github.com/rpbaptist)!)
 
 #### Changed
 
@@ -20,7 +20,7 @@
 
 #### Fixed
 
-* Fixed compatibility with SublimeLinter 4 ([PR #4](https://github.com/elstgav/SublimeLinter-slim-lint/pull/4) — thanks [@rpbaptist!](https://github.com/rpbaptist))
+* Fixed compatibility with SublimeLinter 4 ([PR #4](https://github.com/elstgav/SublimeLinter-slim-lint/pull/4) — thanks [@rpbaptist](https://github.com/rpbaptist)!)
 
 #### Changed
 
